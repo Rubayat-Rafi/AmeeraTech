@@ -12,6 +12,7 @@ const contactInfo = [
     details: 'hello@ameeratech.com',
     desc: 'Our friendly team is here to help.'
   },
+  /*
   {
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,6 +34,7 @@ const contactInfo = [
     details: '+880 1234 567 890',
     desc: 'Mon-Fri from 9am to 6pm.'
   }
+  */
 ]
 
 export default function Contact() {

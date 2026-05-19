@@ -1,5 +1,6 @@
 import { motion, useInView, animate } from 'framer-motion'
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -81,29 +82,33 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p variants={fadeUp} className="text-lg md:text-xl text-[#9ca3af] mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-          From powerful <strong className="text-white font-medium">POS Systems</strong> to stunning{' '}
-          <strong className="text-white font-medium">Websites</strong> &amp;{' '}
-          <strong className="text-white font-medium">Mobile Apps</strong> — we transform your vision into reality.
+          From advanced <strong className="text-white font-medium">Data Powered Solutions</strong> and secure{' '}
+          <strong className="text-white font-medium">Data Management</strong> to cutting-edge{' '}
+          <strong className="text-white font-medium">AI Powered Applications</strong> — we transform your vision into reality.
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <motion.button
-            className="px-9 py-4 w-full sm:w-auto bg-gradient-orange text-white rounded-full font-semibold text-base shadow-glow flex items-center justify-center gap-2"
-            whileHover={{ scale: 1.05, y: -3 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            Start Your Project
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </motion.button>
-          <motion.button
-            className="px-9 py-4 w-full sm:w-auto border border-[#3a3a3a] text-white rounded-full font-semibold text-base hover:bg-[#1a1a1a] transition-all"
-            whileHover={{ scale: 1.03, y: -2 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            View Our Work
-          </motion.button>
+          <Link to="/contact" className="w-full sm:w-auto">
+            <motion.button
+              className="px-9 py-4 w-full bg-gradient-orange text-white rounded-full font-semibold text-base shadow-glow flex items-center justify-center gap-2"
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Start Your Project
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </motion.button>
+          </Link>
+          <Link to="/work" className="w-full sm:w-auto">
+            <motion.button
+              className="px-9 py-4 w-full border border-[#3a3a3a] text-white rounded-full font-semibold text-base hover:bg-[#1a1a1a] transition-all"
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              View Our Work
+            </motion.button>
+          </Link>
         </motion.div>
 
         {/* Stats row */}
