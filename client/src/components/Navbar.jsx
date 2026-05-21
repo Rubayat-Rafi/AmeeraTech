@@ -40,7 +40,7 @@ export default function Navbar() {
             {/* Logo inside the pill */}
             <Link to="/">
               <motion.div
-                className="text-xl font-bold text-gradient-orange tracking-tight cursor-pointer pl-4"
+                className="text-xl font-bold text-gradient-orange tracking-tight cursor-pointer pl-4 font-display"
                 whileHover={{ scale: 1.05 }}
               >
                 AmeeraTech<span style={{ color: 'white' }}>.</span>
@@ -48,7 +48,7 @@ export default function Navbar() {
             </Link>
 
             {/* Links inside the pill */}
-            <div className="flex items-center gap-8 px-6 border-l border-[#3a3a3a] ml-2">
+            <div className="flex items-center gap-8 px-6 border-l border-[#3a3a3a] ml-2 font-display">
               {links.map((link) => {
                 const path = `/${link.toLowerCase()}`
                 const isActive = pathname === path
@@ -69,7 +69,7 @@ export default function Navbar() {
             {/* Button inside the pill */}
             <Link to="/contact">
               <motion.button
-                className="px-6 py-2.5 bg-gradient-orange text-white rounded-full text-sm font-semibold shadow-glow hover:opacity-90 transition-all"
+                className="px-6 py-2.5 bg-gradient-orange text-white rounded-full text-sm font-semibold shadow-glow hover:opacity-90 transition-all font-display"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.97 }}
               >

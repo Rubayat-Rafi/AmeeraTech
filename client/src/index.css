@@ -1,9 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poly:ital@0;1&display=swap");
 @import "tailwindcss";
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: "Playfair Display", "Poly", Georgia, serif;
+  --font-display: "Poly", Georgia, serif;
   --font-sans: "Inter", system-ui, -apple-system, "SF Pro Display", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -58,10 +58,19 @@
   --input: oklch(0.28 0.018 50);
   --ring: oklch(0.72 0.19 50);
 
-  --gradient-orange: linear-gradient(135deg, oklch(0.78 0.21 55), oklch(0.65 0.2 40));
-  --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -10%, oklch(0.35 0.15 50 / 0.4), transparent 70%);
+  --gradient-orange: linear-gradient(
+    135deg,
+    oklch(0.78 0.21 55),
+    oklch(0.65 0.2 40)
+  );
+  --gradient-hero: radial-gradient(
+    ellipse 80% 50% at 50% -10%,
+    oklch(0.35 0.15 50 / 0.4),
+    transparent 70%
+  );
   --shadow-glow: 0 0 60px oklch(0.72 0.19 50 / 0.35);
-  --shadow-card: 0 1px 0 oklch(1 0 0 / 0.04) inset, 0 20px 50px -20px oklch(0 0 0 / 0.6);
+  --shadow-card:
+    0 1px 0 oklch(1 0 0 / 0.04) inset, 0 20px 50px -20px oklch(0 0 0 / 0.6);
 }
 
 .dark {
@@ -83,7 +92,11 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     background-image:
-      radial-gradient(ellipse 1200px 600px at 50% -200px, oklch(0.32 0.14 50 / 0.35), transparent 60%),
+      radial-gradient(
+        ellipse 1200px 600px at 50% -200px,
+        oklch(0.32 0.14 50 / 0.35),
+        transparent 60%
+      ),
       linear-gradient(180deg, oklch(0.14 0.01 50), oklch(0.16 0.012 50));
     background-attachment: fixed;
   }
@@ -117,7 +130,11 @@
   }
 
   .panel {
-    background: linear-gradient(180deg, oklch(0.21 0.014 50 / 0.9), oklch(0.18 0.012 50 / 0.9));
+    background: linear-gradient(
+      180deg,
+      oklch(0.21 0.014 50 / 0.9),
+      oklch(0.18 0.012 50 / 0.9)
+    );
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
   }
