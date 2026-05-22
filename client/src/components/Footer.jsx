@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10 mb-14">
           <div className="md:col-span-2">
             <Link to="/">
-              <div className="text-2xl font-bold text-gradient-orange mb-4 cursor-pointer inline-block">
+              <div className="text-2xl font-bold text-gradient-orange mb-4 cursor-pointer inline-block font-display">
                 AmeeraTech<span style={{ color: 'white' }}>.</span>
               </div>
             </Link>
@@ -51,7 +51,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link to={link.path}>
                       <motion.div
-                        className="text-[#666] text-sm hover:text-orange-400 transition-colors inline-block"
+                        className="text-[#666] text-sm hover:text-orange-400 transition-colors inline-block font-display"
                         whileHover={{ x: 4 }}
                       >
                         {link.label}
