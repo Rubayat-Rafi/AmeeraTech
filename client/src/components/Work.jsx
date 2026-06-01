@@ -4,71 +4,82 @@ import { useRef } from 'react'
 const projects = [
   {
     id: '01',
-    title: 'Aura E-Commerce',
-    category: 'Web Platform',
-    desc: 'A high-performance online retail platform featuring AI-driven product recommendations, seamless crypto payments, and real-time inventory syncing. Built to handle 10,000+ concurrent users with zero latency.',
-    tags: ['Next.js', 'Stripe API', 'Tailwind CSS', 'Redis'],
-    stats: [['+240%', 'Sales Growth'], ['< 0.8s', 'Load Time']],
+    title: 'InvoiceFlow',
+    category: 'Business System',
+    desc: 'A complete invoice and billing management system built for a fast-growing service company. Features recurring invoices, automatic payment reminders, a client self-service portal, and real-time cash flow tracking — cutting admin time by 70%.',
+    tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+    stats: [['-70%', 'Admin Time'], ['800+', 'Invoices/Month']],
     color: 'from-orange-500/30 to-rose-500/30',
     border: 'group-hover:border-orange-500/50',
     mockup: (
       <div className="absolute inset-4 md:inset-8 bg-[#0a0a0a] rounded-xl border border-[#222] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col">
-        {/* Browser Header */}
         <div className="h-10 bg-[#111] border-b border-[#222] flex items-center px-4 gap-2 shrink-0">
           <div className="w-3 h-3 rounded-full bg-red-500/80" />
           <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
           <div className="w-3 h-3 rounded-full bg-green-500/80" />
-          <div className="ml-4 w-48 h-5 bg-[#1a1a1a] rounded-md border border-[#333]" />
+          <div className="ml-4 w-44 h-5 bg-[#1a1a1a] rounded-md border border-[#333]" />
         </div>
-        {/* Browser Body */}
-        <div className="flex-1 p-6 flex flex-col gap-6 overflow-hidden relative">
+        <div className="flex-1 p-5 flex flex-col gap-3 overflow-hidden">
           <div className="flex justify-between items-center">
-            <div className="w-32 h-6 rounded bg-gradient-to-r from-orange-500/20 to-transparent" />
-            <div className="flex gap-2">
-              <div className="w-8 h-8 rounded-full bg-[#1a1a1a]" />
-              <div className="w-8 h-8 rounded-full bg-[#1a1a1a]" />
+            <div>
+              <div className="w-28 h-5 bg-orange-500/20 rounded mb-1.5" />
+              <div className="w-20 h-3 bg-[#222] rounded" />
             </div>
+            <div className="w-24 h-8 rounded-lg bg-orange-500/20 border border-orange-500/30" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[1, 2, 3].map(i => (
-              <div key={i} className="aspect-[4/5] bg-[#151515] rounded-lg border border-[#2a2a2a] p-3 flex flex-col justify-end">
-                <div className="w-full h-3 bg-[#222] rounded mb-2" />
-                <div className="w-1/2 h-3 bg-orange-500/20 rounded" />
+          <div className="flex gap-3 mt-1">
+            {[['bg-green-500/10 border-green-500/20', 'bg-green-500/30'], ['bg-orange-500/10 border-orange-500/20', 'bg-orange-500/30'], ['bg-red-500/10 border-red-500/20', 'bg-red-500/30']].map(([card, bar], i) => (
+              <div key={i} className={`flex-1 rounded-lg p-2.5 border ${card}`}>
+                <div className="w-8 h-2.5 bg-[#333] rounded mb-2" />
+                <div className={`w-12 h-4 rounded ${bar}`} />
               </div>
             ))}
           </div>
+          {[1, 2, 3].map(i => (
+            <div key={i} className="flex items-center gap-3 py-2.5 border-b border-[#1a1a1a]">
+              <div className="w-8 h-8 rounded-lg bg-[#1a1a1a] border border-[#222] shrink-0" />
+              <div className="flex-1 h-3 bg-[#1a1a1a] rounded" />
+              <div className="w-14 h-3 bg-[#222] rounded" />
+              <div className="w-16 h-6 rounded-lg bg-orange-500/15 border border-orange-500/20" />
+            </div>
+          ))}
         </div>
       </div>
     )
   },
   {
     id: '02',
-    title: 'Nexus SaaS Dashboard',
-    category: 'Web Application',
-    desc: 'An enterprise-grade analytics dashboard that unifies scattered data streams into a single, intuitive interface. Features highly interactive financial charts and robust team access controls.',
+    title: 'InventoCore',
+    category: 'Management System',
+    desc: 'A multi-location inventory management platform for a retail distribution company. Real-time stock tracking, automated reorder alerts, supplier management, and profit analytics — giving managers full visibility across 6 warehouses.',
     tags: ['React', 'Node.js', 'PostgreSQL', 'D3.js'],
-    stats: [['10k+', 'Active Users'], ['99.9%', 'Uptime']],
+    stats: [['-41%', 'Stockouts'], ['6', 'Warehouses']],
     color: 'from-blue-500/30 to-cyan-500/30',
     border: 'group-hover:border-blue-500/50',
     mockup: (
       <div className="absolute inset-4 md:inset-8 bg-[#0a0a0a] rounded-xl border border-[#222] overflow-hidden shadow-2xl flex">
-        {/* Sidebar */}
         <div className="w-16 md:w-20 bg-[#111] border-r border-[#222] p-4 flex flex-col gap-4 items-center shrink-0">
           <div className="w-10 h-10 rounded-xl bg-blue-500/20 mb-4" />
           {[1,2,3,4].map(i => <div key={i} className="w-8 h-8 rounded-lg bg-[#1a1a1a]" />)}
         </div>
-        {/* Main Content */}
-        <div className="flex-1 p-6 md:p-8 flex flex-col gap-6 relative">
-          <div className="flex justify-between">
-            <div className="w-1/3 h-8 rounded bg-[#1a1a1a]" />
-            <div className="w-24 h-8 rounded bg-blue-500/10 border border-blue-500/20" />
+        <div className="flex-1 p-5 md:p-6 flex flex-col gap-4 relative">
+          <div className="flex justify-between items-center">
+            <div className="w-1/3 h-7 rounded bg-[#1a1a1a]" />
+            <div className="w-20 h-7 rounded bg-blue-500/10 border border-blue-500/20" />
+          </div>
+          <div className="grid grid-cols-3 gap-2.5">
+            {[['bg-green-500/15 border-green-500/20'], ['bg-yellow-500/15 border-yellow-500/20'], ['bg-red-500/15 border-red-500/20']].map(([cls], i) => (
+              <div key={i} className={`${cls} border rounded-lg p-2.5`}>
+                <div className="w-full h-2.5 bg-[#333] rounded mb-2" />
+                <div className="w-1/2 h-5 bg-[#444] rounded" />
+              </div>
+            ))}
           </div>
           <div className="flex-1 bg-[#111] rounded-xl border border-[#222] p-4 relative overflow-hidden">
-             {/* Fake chart line */}
-             <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
-               <path d="M0,100 L0,50 L20,70 L40,30 L60,60 L80,20 L100,40 L100,100 Z" fill="rgba(59,130,246,0.1)" />
-               <path d="M0,50 L20,70 L40,30 L60,60 L80,20 L100,40" fill="none" stroke="rgba(59,130,246,0.6)" strokeWidth="1.5" />
-             </svg>
+            <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+              <path d="M0,100 L0,50 L20,70 L40,30 L60,60 L80,20 L100,40 L100,100 Z" fill="rgba(59,130,246,0.1)" />
+              <path d="M0,50 L20,70 L40,30 L60,60 L80,20 L100,40" fill="none" stroke="rgba(59,130,246,0.6)" strokeWidth="1.5" />
+            </svg>
           </div>
         </div>
       </div>
@@ -76,29 +87,38 @@ const projects = [
   },
   {
     id: '03',
-    title: 'Pulse Mobile App',
-    category: 'iOS & Android',
-    desc: 'A cross-platform fitness and health tracking application leveraging native device sensors. Includes social challenges, Apple HealthKit integration, and real-time biometric analysis.',
-    tags: ['React Native', 'Firebase', 'HealthKit'],
-    stats: [['4.9', 'App Store'], ['50k+', 'Downloads']],
+    title: 'LeadPulse',
+    category: 'Lead Generation',
+    desc: 'An end-to-end lead generation and qualification platform for a B2B services firm. Captures traffic from 5 channels, scores prospects with custom logic, and routes hot leads directly to the sales team — all on autopilot.',
+    tags: ['Next.js', 'Firebase', 'Tailwind CSS'],
+    stats: [['4.2k', 'Leads/Month'], ['38%', 'Conversion Rate']],
     color: 'from-purple-500/30 to-pink-500/30',
     border: 'group-hover:border-purple-500/50',
     mockup: (
-      <div className="absolute top-8 md:top-12 bottom-[-20%] left-1/2 -translate-x-1/2 w-64 md:w-72 bg-[#0a0a0a] rounded-[2.5rem] border-[6px] border-[#222] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden p-4">
-         {/* Notch */}
-         <div className="w-24 h-6 bg-[#222] rounded-full mx-auto mb-6 relative top-[-4px]" /> 
-         
-         <div className="space-y-6">
-           <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500/40 to-pink-500/40 mx-auto border-4 border-[#1a1a1a]" />
-           <div className="h-24 rounded-2xl bg-[#151515] border border-[#2a2a2a] p-4 flex flex-col justify-center">
-             <div className="w-1/2 h-3 bg-[#333] rounded mb-3" />
-             <div className="w-3/4 h-2 bg-purple-500/40 rounded" />
-           </div>
-           <div className="grid grid-cols-2 gap-3">
-             <div className="h-32 rounded-2xl bg-[#151515] border border-[#2a2a2a]" />
-             <div className="h-32 rounded-2xl bg-[#151515] border border-[#2a2a2a]" />
-           </div>
-         </div>
+      <div className="absolute inset-4 md:inset-8 bg-[#0a0a0a] rounded-xl border border-[#222] overflow-hidden shadow-2xl flex flex-col">
+        <div className="h-10 bg-[#111] border-b border-[#222] flex items-center px-4 gap-2 shrink-0">
+          <div className="w-3 h-3 rounded-full bg-red-500/80" />
+          <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+          <div className="w-3 h-3 rounded-full bg-green-500/80" />
+          <div className="ml-4 w-40 h-5 bg-[#1a1a1a] rounded-md border border-[#333]" />
+        </div>
+        <div className="flex-1 p-5 flex flex-col gap-3 overflow-hidden">
+          <div className="w-36 h-5 bg-[#1a1a1a] rounded mb-1" />
+          {[
+            { w: 'w-full',   color: 'bg-purple-500/20 border-purple-500/15', pct: '4,200' },
+            { w: 'w-4/5',    color: 'bg-purple-500/28 border-purple-500/20', pct: '1,890' },
+            { w: 'w-3/5',    color: 'bg-purple-500/35 border-purple-500/28', pct: '720'   },
+            { w: 'w-[38%]',  color: 'bg-purple-500/50 border-purple-500/40', pct: '274'   },
+          ].map((s, i) => (
+            <div key={i} className="space-y-1.5">
+              <div className="flex justify-between items-center">
+                <div className="w-16 h-2.5 bg-[#222] rounded" />
+                <div className="w-10 h-2.5 bg-purple-500/20 rounded" />
+              </div>
+              <div className={`${s.w} h-8 ${s.color} border rounded-lg transition-all`} />
+            </div>
+          ))}
+        </div>
       </div>
     )
   }
@@ -228,7 +248,7 @@ export default function Work() {
             Featured <span className="text-gradient-orange italic-serif font-normal">Work</span>
           </h2>
           <p className="text-[#9ca3af] max-w-2xl mx-auto text-lg leading-relaxed">
-            Explore our latest projects. We combine stunning aesthetics with bulletproof engineering to build digital products that dominate their markets.
+            Real products we've built for real businesses — invoice systems, inventory platforms, and lead generation tools that measurably moved the needle.
           </p>
         </motion.div>
 

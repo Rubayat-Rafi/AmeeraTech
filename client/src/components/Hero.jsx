@@ -40,8 +40,8 @@ function Counter({ from = 0, to, suffix = "", duration = 3.5 }) {
 }
 
 const stats = [
-  { to: 150, suffix: "+", label: "Projects Delivered" },
-  { to: 50, suffix: "+", label: "Happy Clients" },
+  { to: 150, suffix: "+", label: "Products Built" },
+  { to: 50, suffix: "+", label: "Businesses Served" },
   { to: 5, suffix: "+", label: "Years Experience" },
   { staticText: "24/7", label: "Support" },
 ];
@@ -88,33 +88,31 @@ export default function Hero() {
           className="inline-flex items-center gap-2 mb-8 px-5 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-sm font-medium backdrop-blur-md"
         >
           <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse inline-block" />
-          Elevating Digital Experiences Since 2020
+          Building Digital Products Since 2020
         </motion.div>
 
         <motion.h1
           variants={fadeUp}
           className="text-5xl md:text-7xl font-normal mb-6 text-white leading-[1.1] tracking-tight"
         >
-          We Build Premium
+          We Build the Software
           <br />
-          <span className="italic">Digital Products</span>
+          <span className="italic">Your Business Runs On</span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="text-lg md:text-xl text-[#9ca3af] mb-10 max-w-2xl mx-auto font-light leading-relaxed"
         >
-          From advanced{" "}
+          From{" "}
+          <strong className="text-white font-medium">custom websites</strong>
+          {" "}and{" "}
+          <strong className="text-white font-medium">POS & inventory systems</strong>{" "}
+          to{" "}
           <strong className="text-white font-medium">
-            Data Powered Solutions
+            lead generation platforms
           </strong>{" "}
-          and secure{" "}
-          <strong className="text-white font-medium">Data Management</strong> to
-          cutting-edge{" "}
-          <strong className="text-white font-medium">
-            AI Powered Applications
-          </strong>{" "}
-          — we transform your vision into reality.
+          — purpose-built digital products that keep your business running and growing.
         </motion.p>
 
         <motion.div

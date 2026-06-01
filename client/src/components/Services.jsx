@@ -6,32 +6,32 @@ const services = [
   {
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
       </svg>
     ),
-    title: 'Data Powered Solutions',
-    desc: 'Extract deep, actionable insights from raw data. We build intelligence systems that power smarter decisions and unlock business acceleration.',
-    features: ['Advanced Analytics Dashboards', 'Customer Behavior Mapping', 'Real-time Event Tracking'],
+    title: 'Websites & Web Apps',
+    desc: 'Professional, conversion-optimized websites and web applications. From business landing pages and e-commerce stores to booking systems and customer portals — built to perform.',
+    features: ['Responsive & SEO-Optimized', 'CMS & Content Integration', 'Performance-Tuned Builds'],
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7H6a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2V9a2 2 0 00-2-2h-3M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M9 7h6m-3 4v4m-2-2h4" />
       </svg>
     ),
-    title: 'Data Management',
-    desc: 'Sleek, bulletproof data piping and cloud warehousing. We architect secure pipelines to store, clean, organize, and govern complex data sets.',
-    features: ['Custom Data Pipelines', 'Cloud Data Warehousing', 'Data Cleansing & Integrity'],
+    title: 'Business Management Systems',
+    desc: 'Purpose-built software to run your operations. POS systems, inventory management, invoicing platforms, and custom CMS — engineered exactly how your business works, not adapted from a template.',
+    features: ['POS & Invoice Systems', 'Inventory & Stock Control', 'Custom CMS Dashboards'],
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
       </svg>
     ),
-    title: 'AI Powered Applications',
-    desc: 'Inject cutting-edge intelligence into your systems. We deploy custom machine learning algorithms, NLP, and LLM automation systems built to scale.',
-    features: ['Predictive Modeling Solutions', 'Generative AI & LLM APIs', 'Automated Decision Engines'],
+    title: 'Lead Generation Platforms',
+    desc: 'Digital platforms that capture, qualify, and convert prospects. Landing pages, CRM integrations, and automated pipelines that consistently fill your sales funnel.',
+    features: ['High-Converting Landing Pages', 'CRM & Pipeline Automation', 'Lead Capture & Nurture Funnels'],
   },
 ]
 
@@ -116,7 +116,7 @@ export default function Services() {
             Our Core <span className="text-gradient-orange italic-serif font-normal">Services</span>
           </h2>
           <p className="text-[#9ca3af] max-w-xl mx-auto text-lg">
-            Comprehensive digital solutions tailored for your business growth.
+            Custom-built digital products that run your business, grow your customers, and scale with you.
           </p>
         </motion.div>
 

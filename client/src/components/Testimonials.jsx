@@ -2,9 +2,9 @@ import { motion, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
 const testimonials = [
-  { name: 'John Smith', role: 'CEO, TechStart', stars: 5, quote: '"AmeeraTech delivered beyond our expectations. Their attention to detail and commitment to quality is truly unmatched."' },
-  { name: 'Sarah Johnson', role: 'Founder, RetailPlus', stars: 5, quote: '"Professional, responsive, and incredibly talented. They transformed our retail operations with their POS system."' },
-  { name: 'Mike Davis', role: 'CTO, InnovateCo', stars: 5, quote: '"The best development team we\'ve worked with. They delivered our mobile app on time and exactly as envisioned."' },
+  { name: 'Arif Hossain', role: 'Owner, Hossain Trading Co.', stars: 5, quote: '"AmeeraTech built our entire inventory and invoicing system from scratch. What used to take our team hours every day now takes minutes. The ROI was immediate."' },
+  { name: 'Sarah Johnson', role: 'Founder, RetailPlus', stars: 5, quote: '"Professional, responsive, and incredibly talented. They transformed our retail operations with a custom POS system that fits exactly how we work."' },
+  { name: 'Nadia Rahman', role: 'CEO, StyleHouse BD', stars: 5, quote: '"Their lead generation platform brought us 3x more qualified enquiries in the first month. We finally have a pipeline that fills itself — it changed how we do sales."' },
 ]
 
 export default function Testimonials() {

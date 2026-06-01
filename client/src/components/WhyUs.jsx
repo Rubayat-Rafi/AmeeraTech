@@ -3,32 +3,32 @@ import { useRef } from 'react'
 
 const features = [
   {
-    icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
-    title: 'Fast Execution',
-    desc: 'Agile methodologies for rapid delivery without sacrificing quality or detail.',
+    icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>,
+    title: 'Custom-Built, Not Templates',
+    desc: 'Every product is engineered around your exact business logic — no generic themes or off-the-shelf shortcuts.',
   },
   {
     icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
     title: 'Secure & Scalable',
-    desc: 'Enterprise-grade security architecture that grows with your business needs.',
+    desc: 'Production-grade architecture built to grow — from your first 100 users to your first 100,000.',
   },
   {
-    icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>,
-    title: 'Dedicated Team',
-    desc: 'Expert developers, designers, and strategists dedicated to your project\'s success.',
+    icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>,
+    title: 'Ongoing Maintenance',
+    desc: "We don't disappear after launch. Continuous updates, improvements, and feature additions as your business evolves.",
   },
   {
     icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" /></svg>,
     title: '24/7 Support',
-    desc: 'Round-the-clock support to ensure your digital products run without interruption.',
+    desc: 'Round-the-clock support to keep your business-critical systems running without interruption.',
   },
 ]
 
 const bars = [
-  { label: 'POS Systems', value: 75 },
-  { label: 'Web Apps', value: 90 },
-  { label: 'Mobile Apps', value: 65 },
-  { label: 'UI/UX Design', value: 82 },
+  { label: 'Website Development', value: 92 },
+  { label: 'POS & Business Systems', value: 88 },
+  { label: 'Lead Generation', value: 78 },
+  { label: 'CMS & Custom Platforms', value: 85 },
 ]
 
 export default function WhyUs() {
@@ -50,10 +50,10 @@ export default function WhyUs() {
               Why AmeeraTech
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-              Built for <span className="text-gradient-orange italic-serif font-normal">Growth</span> &amp; Excellence
+              Built for <span className="text-gradient-orange italic-serif font-normal">Business</span> — Not Just the Web
             </h2>
             <p className="text-[#9ca3af] mb-10 text-lg leading-relaxed">
-              We don't just build products — we build partnerships. Our holistic approach ensures your digital solution is beautiful, functional, and built to last.
+              We don't build templates — we build solutions. Every product is engineered to fit your exact workflow, scale with your team, and deliver ROI from day one.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">
@@ -91,7 +91,7 @@ export default function WhyUs() {
                 <div className="w-3 h-3 rounded-full bg-red-500/80" />
                 <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                 <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                <div className="ml-3 text-xs text-[#555] font-mono">ameeratech.dashboard — live</div>
+                <div className="ml-3 text-xs text-[#555] font-mono">ameeratech.studio — products</div>
                 <div className="ml-auto flex items-center gap-1.5">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                   <span className="text-xs text-green-500">Connected</span>
@@ -101,14 +101,14 @@ export default function WhyUs() {
               <div className="p-6">
                 <div className="flex justify-between items-start mb-8">
                   <div>
-                    <div className="text-xs text-[#666] mb-1 uppercase tracking-wider">Total Revenue</div>
+                    <div className="text-xs text-[#666] mb-1 uppercase tracking-wider">Products Delivered</div>
                     <motion.div
                       className="text-3xl font-bold text-white"
                       initial={{ opacity: 0 }}
                       animate={inView ? { opacity: 1 } : {}}
                       transition={{ delay: 0.6 }}
                     >
-                      $124,563<span className="text-base text-[#666]">.00</span>
+                      150<span className="text-base text-[#666]">+ builds</span>
                     </motion.div>
                   </div>
                   <div className="flex items-center gap-1.5 text-sm text-green-400 bg-green-500/10 px-3 py-1.5 rounded-full">
@@ -139,7 +139,7 @@ export default function WhyUs() {
                 </div>
 
                 <div className="mt-8 grid grid-cols-3 gap-3">
-                  {[['48', 'Active Projects'], ['98%', 'Satisfaction'], ['< 24h', 'Response']].map(([v, l]) => (
+                  {[['50+', 'Clients Served'], ['98%', 'Satisfaction'], ['< 24h', 'Response']].map(([v, l]) => (
                     <div key={l} className="bg-[#151515] rounded-lg p-3 text-center border border-[#222]">
                       <div className="text-lg font-bold text-orange-400">{v}</div>
                       <div className="text-xs text-[#666] mt-0.5">{l}</div>

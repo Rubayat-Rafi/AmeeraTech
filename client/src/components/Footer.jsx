@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const footerLinks = {
   Services: [
-    { label: 'POS Systems', path: '/services' },
-    { label: 'Web Development', path: '/services' },
-    { label: 'Mobile Apps', path: '/services' },
-    { label: 'UI/UX Design', path: '/services' },
+    { label: 'Websites & Web Apps', path: '/services' },
+    { label: 'POS & Invoice Systems', path: '/services' },
+    { label: 'Inventory Management', path: '/services' },
+    { label: 'Lead Generation Platforms', path: '/services' },
   ],
   Company: [
     { label: 'About Us', path: '/about' },
@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-[#666] max-w-sm leading-relaxed mb-6">
-              Transforming ideas into exceptional digital products. POS systems, websites, and mobile apps — built to last.
+              Custom-built digital products for growing businesses — websites, POS systems, inventory platforms, and lead generation tools built to last.
             </p>
             <div className="flex gap-3">
               {['twitter', 'linkedin', 'github'].map((s) => (
