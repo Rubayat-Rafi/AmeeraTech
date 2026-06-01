@@ -6,11 +6,12 @@ const mongoose = require("mongoose");
 const app = express();
 const port = process.env.PORT || 3000;
 
+
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
-      "http://localhost:4173",
+      // "http://localhost:5173",
+      // "http://localhost:4173",
       "https://ameeratech.com",
       "https://www.ameeratech.com",
     ],
@@ -18,8 +19,10 @@ app.use(
 );
 app.use(express.json());
 
+
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/contacts", require("./routes/contacts"));
+
 
 mongoose
   .connect(process.env.MONGODB_URI)
