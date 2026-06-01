@@ -41,6 +41,8 @@ const CheckIcon = () => (
   </svg>
 )
 
+const numbers = ['01', '02', '03']
+
 function ServiceCard({ service, index }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
@@ -51,30 +53,40 @@ function ServiceCard({ service, index }) {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.15, ease: 'easeOut' }}
-      className="panel p-8 group relative overflow-hidden cursor-default"
-      whileHover={{ y: -8, transition: { duration: 0.3 } }}
+      className="panel p-8 group relative overflow-hidden cursor-default flex flex-col"
+      whileHover={{ y: -6, transition: { duration: 0.3 } }}
     >
+      {/* Top accent line — always visible, brightens on hover */}
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-orange-500/30 to-transparent group-hover:via-orange-500/70 transition-all duration-500" />
+
       {/* Glow corner */}
       <motion.div
-        className="absolute top-0 right-0 w-40 h-40 bg-orange-500/10 rounded-bl-[80px] -mr-10 -mt-10"
+        className="absolute top-0 right-0 w-48 h-48 bg-orange-500/8 rounded-bl-[100px] -mr-12 -mt-12 pointer-events-none"
         initial={{ opacity: 0 }}
         whileHover={{ opacity: 1, scale: 1.1 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.4 }}
       />
-      {/* Top glow line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-      <motion.div
-        className="w-14 h-14 bg-gradient-orange rounded-xl mb-6 flex items-center justify-center text-white shadow-glow relative z-10"
-        whileHover={{ rotate: [0, -10, 10, 0], transition: { duration: 0.4 } }}
-      >
-        {service.icon}
-      </motion.div>
+      {/* Number + icon row */}
+      <div className="flex items-start justify-between mb-6 relative z-10">
+        <motion.div
+          className="w-14 h-14 bg-gradient-orange rounded-xl flex items-center justify-center text-white shadow-glow"
+          whileHover={{ rotate: [0, -8, 8, 0], transition: { duration: 0.4 } }}
+        >
+          {service.icon}
+        </motion.div>
+        <span className="text-5xl font-bold text-white/5 font-serif select-none leading-none mt-1">
+          {numbers[index]}
+        </span>
+      </div>
 
-      <h3 className="text-2xl font-bold mb-3 text-white relative z-10">{service.title}</h3>
-      <p className="text-[#9ca3af] leading-relaxed relative z-10 mb-6">{service.desc}</p>
+      <h3 className="text-xl font-bold mb-3 text-white relative z-10">{service.title}</h3>
+      <p className="text-[#9ca3af] leading-relaxed relative z-10 mb-6 text-sm flex-1">{service.desc}</p>
 
-      <ul className="space-y-2.5 relative z-10">
+      {/* Divider */}
+      <div className="h-px bg-[#1e1e1e] mb-5 relative z-10" />
+
+      <ul className="space-y-2.5 relative z-10 mb-6">
         {service.features.map((f) => (
           <li key={f} className="flex items-center gap-2.5 text-sm text-[#8a919e]">
             <CheckIcon /> {f}
@@ -83,7 +95,7 @@ function ServiceCard({ service, index }) {
       </ul>
 
       <motion.button
-        className="mt-8 text-sm font-semibold text-orange-400 flex items-center gap-1.5 group/btn relative z-10"
+        className="mt-auto text-sm font-semibold text-orange-400 flex items-center gap-1.5 group/btn relative z-10 w-fit"
         whileHover={{ x: 4 }}
       >
         Learn more
@@ -112,10 +124,10 @@ export default function Services() {
           <span className="inline-block px-4 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-widest mb-5">
             What We Offer
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-xl md:text-3xl font-bold mb-4 text-white">
             Our Core <span className="text-gradient-orange italic-serif font-normal">Services</span>
           </h2>
-          <p className="text-[#9ca3af] max-w-xl mx-auto text-lg">
+          <p className="text-[#9ca3af] max-w-xl mx-auto text-sm md:text-base">
             Custom-built digital products that run your business, grow your customers, and scale with you.
           </p>
         </motion.div>

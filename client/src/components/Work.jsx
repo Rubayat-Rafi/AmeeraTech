@@ -184,11 +184,11 @@ function ProjectCard({ project, index }) {
           </span>
         </div>
         
-        <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
+        <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-white mb-4 tracking-tight leading-tight">
           {project.title}
         </h3>
         
-        <p className="text-[#9ca3af] text-lg leading-relaxed mb-8">
+        <p className="text-[#9ca3af] text-sm md:text-base leading-relaxed mb-8">
           {project.desc}
         </p>
         
@@ -203,8 +203,8 @@ function ProjectCard({ project, index }) {
         <div className="grid grid-cols-2 gap-8 border-t border-[#1e1e1e] pt-8 mb-10">
           {project.stats.map(([val, label]) => (
             <div key={label}>
-              <div className="text-3xl font-bold text-white mb-1">{val}</div>
-              <div className="text-sm text-[#666] uppercase tracking-wider">{label}</div>
+              <div className="text-2xl font-bold text-white mb-1">{val}</div>
+              <div className="text-xs text-[#666] uppercase tracking-wider">{label}</div>
             </div>
           ))}
         </div>
@@ -244,10 +244,10 @@ export default function Work() {
           <span className="inline-block px-4 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-widest mb-5">
             Our Portfolio
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+          <h2 className="text-xl md:text-3xl font-bold mb-6 text-white">
             Featured <span className="text-gradient-orange italic-serif font-normal">Work</span>
           </h2>
-          <p className="text-[#9ca3af] max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-[#9ca3af] max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
             Real products we've built for real businesses — invoice systems, inventory platforms, and lead generation tools that measurably moved the needle.
           </p>
         </motion.div>

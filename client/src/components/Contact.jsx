@@ -65,11 +65,11 @@ export default function Contact() {
             <span className="inline-block px-4 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-widest mb-6 w-max">
               Connect With Us
             </span>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+            <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-6 text-white leading-tight">
               Let's Build Something <br/>
               <span className="text-gradient-orange italic-serif font-normal">Extraordinary</span>
             </h2>
-            <p className="text-[#9ca3af] text-lg mb-12 max-w-md leading-relaxed">
+            <p className="text-[#9ca3af] text-sm md:text-base mb-12 max-w-md leading-relaxed">
               Whether you have a wild idea or a detailed spec, we'd love to hear about it. Drop us a message and our team will get back to you within 24 hours.
             </p>
 
@@ -115,7 +115,7 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-3xl font-bold text-white mb-3">Message Sent!</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">Message Sent!</h3>
                   <p className="text-[#9ca3af] text-lg">Thank you for reaching out. We will get back to you shortly.</p>
                 </motion.div>
               ) : (

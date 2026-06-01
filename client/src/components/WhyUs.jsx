@@ -49,10 +49,10 @@ export default function WhyUs() {
             <span className="inline-block px-4 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-widest mb-5">
               Why AmeeraTech
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+            <h2 className="text-xl md:text-3xl font-bold mb-6 text-white leading-tight">
               Built for <span className="text-gradient-orange italic-serif font-normal">Business</span> — Not Just the Web
             </h2>
-            <p className="text-[#9ca3af] mb-10 text-lg leading-relaxed">
+            <p className="text-[#9ca3af] mb-10 text-sm md:text-base leading-relaxed">
               We don't build templates — we build solutions. Every product is engineered to fit your exact workflow, scale with your team, and deliver ROI from day one.
             </p>
 
@@ -103,7 +103,7 @@ export default function WhyUs() {
                   <div>
                     <div className="text-xs text-[#666] mb-1 uppercase tracking-wider">Products Delivered</div>
                     <motion.div
-                      className="text-3xl font-bold text-white"
+                      className="text-2xl font-bold text-white"
                       initial={{ opacity: 0 }}
                       animate={inView ? { opacity: 1 } : {}}
                       transition={{ delay: 0.6 }}

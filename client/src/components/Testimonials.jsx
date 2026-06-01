@@ -34,7 +34,7 @@ export default function Testimonials() {
           <span className="inline-block px-4 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-widest mb-5">
             Client Stories
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-xl md:text-3xl font-bold mb-4 text-white">
             What Our <span className="text-gradient-orange italic-serif font-normal">Clients Say</span>
           </h2>
           <p className="text-[#9ca3af] max-w-xl mx-auto">
